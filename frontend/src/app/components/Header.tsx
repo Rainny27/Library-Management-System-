@@ -6,16 +6,15 @@ export default function Header() {
     <header className={styles.siteHeader}>
       <nav className={styles.siteNav} aria-label="Main navigation">
         <div className={styles.navLeft}>
-          <Link href="/" className={styles.brand}>
-            Library Management System
+          <Link href="/" className={styles.siteLogo}>
+            <span className={styles.siteLogoTitle}>Project Delta</span>
+            <span className={styles.siteLogoSubtitle}>Library System</span>
           </Link>
         </div>
 
         <div className={styles.navRight}>
           <Link href="/">Home</Link>
           <Link href="/catalog">Catalog</Link>
-          <Link href="/membership">Membership</Link>
-          <Link href="/reservation">Reservation</Link>
           <Link href="/wishlist">Wishlist</Link>
           <Link href="/about">About</Link>
           <Link href="/credits">Credits</Link>

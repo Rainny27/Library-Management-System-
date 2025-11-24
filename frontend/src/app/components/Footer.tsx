@@ -27,13 +27,13 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="/icons/github.webp" alt="GitHub" width={28} height={28} />
+          <Image src="/icons/github.png" alt="GitHub" width={28} height={28} />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
           <Image src="/icons/linkden2.png" alt="LinkedIn" width={28} height={28} />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <Image src="/icons/facebook.webp" alt="Facebook" width={28} height={28} />
+          <Image src="/icons/facebook.png" alt="Facebook" width={28} height={28} />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
           <Image src="/icons/twitter.png" alt="Twitter" width={28} height={28} />
