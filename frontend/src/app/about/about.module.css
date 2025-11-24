@@ -1,91 +1,150 @@
-/* styles used only by About page */
-.about-page {
+
+
+/* page wrapper */
+.about-page,
+.aboutPage {
   background-color: transparent;
   padding: 2rem 0;
   min-height: 100vh;
-  color: #ffffff;
+  color: var(--deep-brown); /* primary text color */
+  font-family: inherit;
 }
 
-.about-container {
+/* container */
+.about-container,
+.aboutContainer {
   display: grid;
   gap: 1rem;
   padding: 2rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-  color: #fff;
+  color: var(--deep-brown);
 }
 
-.about-container h1 {
+/* page heading */
+.about-container h1,
+.aboutHeading,
+.about-heading {
   margin-bottom: 1.5rem;
   font-size: 1.9rem;
-  color: #ffffff;
+  color: var(--deep-brown);
   text-align: left;
 }
 
-/* responsive grid for team cards */
-.about-team {
+/* team grid */
+.about-team,
+.aboutTeam {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: 1fr;
 }
 
-/* team member cards */
-.about-card {
-  background: rgba(255, 255, 255, 0.05);
+/* cards */
+.about-card,
+.aboutCard {
+  background: var(--card-bg, #fbf6ed);
   border-radius: 10px;
   padding: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-sand, #e0d2b6);
+  box-shadow: 0 6px 18px rgba(46,36,26,0.04);
   transition: transform 180ms ease, box-shadow 180ms ease, border 180ms ease;
   display: flex;
   gap: 0.75rem;
   align-items: center;
 }
+
+/* hover/focus state */
 .about-card:hover,
-.about-card:focus-within {
+.about-card:focus-within,
+.aboutCard:hover,
+.aboutCard:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(46,36,26,0.06);
+  border-color: rgba(46,36,26,0.12);
 }
-.about-card h2 {
+
+/* card title */
+.about-card h2,
+.aboutCard h2 {
   margin: 0;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: var(--deep-brown);
 }
-.about-card ul {
+
+/* member info list */
+.about-card ul,
+.aboutCard ul {
   list-style: none;
   padding: 0;
   margin: 0.5rem 0 0;
   display: grid;
   gap: 0.4rem;
   font-size: 0.98rem;
+  color: var(--muted);
 }
-.about-card li strong {
+
+.about-card li strong,
+.aboutCard li strong {
   display: inline-block;
   width: 6.5rem;
-  color: #dbeafe;
+  color: var(--deep-brown);
 }
-.about-card li {
+
+/* inline items */
+.about-card li,
+.aboutCard li {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
   align-items: baseline;
-  color: #ffffff;
+  color: var(--deep-brown);
 }
 
-/* breakpoints */
+/* avatar / image area (keeps layout consistent) */
+.about-card .avatar,
+.aboutCard .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+}
+
+/* responsive grid breakpoints */
 @media (min-width: 600px) {
-  .about-team {
+  .about-team,
+  .aboutTeam {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (min-width: 900px) {
-  .about-team {
+  .about-team,
+  .aboutTeam {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 @media (min-width: 1200px) {
-  .about-team {
+  .about-team,
+  .aboutTeam {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* small screens: tighten padding */
+@media (max-width: 480px) {
+  .about-container,
+  .aboutContainer {
+    padding: 1.25rem;
+  }
+  .about-card,
+  .aboutCard {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+  .about-card .avatar,
+  .aboutCard .avatar {
+    width: 56px;
+    height: 56px;
   }
 }
