@@ -1,14 +1,17 @@
+/* ===== CATALOG MODULE CSS ===== */
+
 /* container */
 .catalogContainer {
   padding: 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
-  color: var(--text, #ffffff);
+  color: var(--deep-brown); /* main text color */
 }
 .catalogHeading {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  color: var(--deep-brown);
 }
 
 /* layout */
@@ -60,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--muted); /* secondary text color */
   font-size: 1.25rem;
 }
 
@@ -74,10 +77,11 @@
   font-size: 1.2rem;
   margin: 0 0 0.5rem 0;
   font-weight: 600;
+  color: var(--deep-brown);
 }
 .catalogMeta {
   margin: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
   font-size: 0.9rem;
 }
 .catalogDescription {
@@ -89,6 +93,7 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
+  color: var(--deep-brown);
 }
 
 /* buttons */
@@ -99,17 +104,17 @@
   flex-wrap: wrap;
 }
 .catalogButton {
-  background: #ffd35c;
+  background: var(--catalog-btn-bg, #ffd35c);
   border: none;
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  color: #000;
+  color: var(--catalog-btn-text, #000);
   transition: background 0.2s ease;
 }
 .catalogButton:hover {
-  background: #ffc43c;
+  background: var(--catalog-btn-bg-hover, #ffc43c);
 }
 .catalogButtonOutline {
   background: transparent;
@@ -117,7 +122,7 @@
   padding: 0.5rem 0.9rem;
   border-radius: 6px;
   cursor: pointer;
-  color: #fff;
+  color: var(--deep-brown); /* changed from white */
   transition: background 0.2s ease, color 0.2s ease;
 }
 .catalogButtonOutline:hover {
@@ -128,12 +133,12 @@
 .catalogCenter {
   padding: 2rem;
   text-align: center;
-  color: #fff;
+  color: var(--deep-brown);
 }
 .catalogCenterError {
   padding: 2rem;
   text-align: center;
-  color: #ff9c9c;
+  color: var(--catalog-error, #ff9c9c);
 }
 
 /* modal overlay */
@@ -175,12 +180,12 @@
   overflow: auto;
 }
 .modalBody .catalogTitle {
-  color: #ffffff;
+  color: var(--deep-brown);
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 .modalBody .catalogMeta {
-  color: #ffffff;
+  color: var(--muted);
   margin: 0.25rem 0;
   font-size: 0.95rem;
 }
@@ -189,7 +194,7 @@
   overflow: visible;
   display: block;
   line-height: 1.5;
-  color: #ffffff;
+  color: var(--deep-brown);
   margin-top: 0.75rem;
 }
 .modalBody .catalogActions {
@@ -199,12 +204,12 @@
   flex-wrap: wrap;
 }
 .modalBody .catalogActions .catalogButtonOutline {
-  color: #fff;
+  color: var(--deep-brown);
   border-color: rgba(255,255,255,0.3);
 }
 .modalBody .catalogActions .catalogButton {
-  background: #ffd35c;
-  color: #000;
+  background: var(--catalog-btn-bg, #ffd35c);
+  color: var(--catalog-btn-text, #000);
 }
 @media (max-width: 880px) {
   .modalCard {
@@ -215,7 +220,6 @@
     min-height: 220px;
   }
 }
-
 
 /* search bar */
 .catalogSearchBar {
@@ -233,18 +237,18 @@
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: var(--deep-brown);
   font-size: 1rem;
   transition: border 0.2s ease, background 0.2s ease;
 }
 
 .catalogSearchInput::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
 }
 
 .catalogSearchInput:focus {
   outline: none;
-  border-color: #ffd35c;
+  border-color: var(--catalog-btn-bg, #ffd35c);
   background: rgba(255, 211, 92, 0.1);
 }
 
@@ -254,7 +258,7 @@
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: var(--deep-brown);
   font-size: 0.95rem;
   cursor: pointer;
   transition: border 0.2s ease, background 0.2s ease;
@@ -262,7 +266,7 @@
 
 .catalogSelect:focus {
   outline: none;
-  border-color: #ffd35c;
+  border-color: var(--catalog-btn-bg, #ffd35c);
   background: rgba(255, 211, 92, 0.1);
 }
 
@@ -272,7 +276,7 @@
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: var(--deep-brown);
   font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
@@ -280,6 +284,6 @@
 
 .catalogClearButton:hover {
   background: rgba(255, 211, 92, 0.1);
-  border-color: #ffd35c;
-  color: #ffd35c;
+  border-color: var(--catalog-btn-bg, #ffd35c);
+  color: var(--catalog-btn-bg, #ffd35c);
 }
